@@ -40,7 +40,7 @@ class Moderation(commands.Cog):
     @commands.command()
     @commands.has_permissions(ban_members=True)
     async def ban(self, ctx, member : discord.Member, *, reason=None):
-        role = get(member.guild.roles, name='LA_Staff')
+        role = get(member.guild.roles, name='Duck')
         if role in member.roles:
             await ctx.send("Cannot ban that user, try again.")
         else:
