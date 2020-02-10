@@ -1,8 +1,3 @@
-
-# To-Do List:
-# 1. Add a channel feature for the say command.
-# 2. Give the update command a better outline.
-
 import discord
 import random
 import os
@@ -22,29 +17,19 @@ class Chat(commands.Cog):
 
 
     @commands.command()
-    async def updates(self, ctx, *, msg):
-        await ctx.message.delete()
-        embed = discord.Embed(color=discord.Color.teal())
-        embed.add_field(name='Updates!', value=f'{msg}')
-
-        await ctx.send(embed=embed)
-
-
-    @commands.command()
-    async def announce(self, ctx, *, msg):
-        await ctx.message.delete()
-        embed = discord.Embed(color=discord.Color.green())
-        embed.add_field(name='Announcements!', value=f'{msg}')
-
-        await ctx.send(embed=embed)
-
-    @commands.command()
     @commands.has_permissions(manage_messages=True)
     async def say(self, ctx, *, msg):
+        txt = ["You're all chicken nuggets.,
+               "Nyoooooooooooooooooooooom",
+               "Quack.",
+               "Look at all those chickens!",
+               "Minecraft is better than Fortnut.",
+               "twitter.com/WispyTheDuck"]
+        
         await ctx.message.delete()
         embed = discord.Embed(color=discord.Color.orange())
         embed.add_field(name='**Pinata Bot**', value=f'{msg}')
-        embed.set_footer(text="You're all chicken nuggets.")
+        embed.set_footer(text=f"{random.choice(txt)}")
         await ctx.send(embed=embed)
 
 def setup(bot):
