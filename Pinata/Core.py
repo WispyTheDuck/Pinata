@@ -191,4 +191,4 @@ async def apply(ctx, *args):
     
 
 
-bot.run("NjQ1MDU1NjYxNTkxMzYzNjE0.XjDz1Q.sJS5vkq_hfLsuPo2rqwAb6vnSBk")
+bot.run("token")
