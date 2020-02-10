@@ -8,12 +8,6 @@ class Economy(commands.Cog):
 
     def __innit__(self, bot):
         self.bot = bot
-
-
-    @commands.command()
-    async def work(self, ctx):
-        with open('users.json') as f:
-            if user.id not in ['users']:
                 
 
              
